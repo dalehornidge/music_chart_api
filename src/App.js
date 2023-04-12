@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
+import ChartContainer from './containers/ChartContainer';
 
 function App() {
+
+const [chart, setChart] = useState("")
+
+// const fetchChart = function() {
+//   const request = fetch("https://itunes.apple.com/gb/rss/topsongs/limit=20/json")
+//   .then(response => response.json())
+//   .then(data => setChart(data.feed.entry))
+// }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+   <h1>Current iTunes UK Top 20</h1>
+    <ChartContainer/>
+</>
   );
 }
 
